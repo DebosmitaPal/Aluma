@@ -43,7 +43,7 @@ Respond only in **valid JSON** format, like the example below:
 `;
 
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: process.env.MODEL });
 
     const result = await model.generateContent({
       contents: [

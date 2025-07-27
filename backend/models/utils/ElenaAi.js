@@ -78,7 +78,7 @@ Trusted Contacts: ${contacts}
 
     console.log(formattedConversations)
 
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: process.env.MODEL });
 
   // Determine whether to include conversation context
   const userId = userInfo?._id || "guest";
@@ -155,7 +155,12 @@ Trusted Contacts: ${contacts}
 
   try {
     const result = await model.generateContent({
-      contents: formattedConversations,
+      contents: [
+        {
+          role:"user",
+          parts : [{text : prompt}]
+        },
+        ...formattedConversations],
     });
     const response = await result.response;
     await saveBotConversation(userInfo?._id,"elena",response.text())

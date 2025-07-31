@@ -25,7 +25,6 @@ export default function Navbar() {
 
   const navItems = [
     { id: "top", label: "Top" },
-    { id: "FocusCards", label: "Elena & Jess" },
     { id: "FocusCards", label: "Journal" },
     { id: "SelfAssessment", label: "AI Assessment" },
     { id: "music", label: "Music" },

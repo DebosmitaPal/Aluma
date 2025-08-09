@@ -12,6 +12,7 @@
     "@clerk/clerk-react": "^5.31.8",
     "@clerk/nextjs": "^6.20.2",
     "@react-three/fiber": "^9.0.0-alpha.8",
+    "@studio-freight/lenis": "^1.0.42",
     "@tabler/icons-react": "^3.34.0",
     "axios": "^1.11.0",
     "class-variance-authority": "^0.7.1",
